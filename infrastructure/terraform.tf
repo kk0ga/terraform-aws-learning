@@ -3,6 +3,7 @@ terraform {
 
   # bootstrap が作成した state バケット上の通常インフラ用キーを使う。
   backend "s3" {
+    bucket      = "terraform-aws-learning-state"
     key          = "terraform-aws-learning/terraform.tfstate"
     region       = "ap-northeast-1"
     encrypt      = true

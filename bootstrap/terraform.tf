@@ -3,6 +3,7 @@ terraform {
 
   # 初回 apply 後に bootstrap 自身の state をこのキーへ移行する。
   backend "s3" {
+    bucket      = "terraform-aws-learning-state"
     key          = "bootstrap/terraform.tfstate"
     region       = "ap-northeast-1"
     encrypt      = true
