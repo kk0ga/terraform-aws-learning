@@ -1,10 +1,9 @@
 terraform {
   required_version = ">= 1.5.0"
 
-  # bootstrap が作成した state バケット上の通常インフラ用キーを使う。
   backend "s3" {
-    bucket      = "terraform-aws-learning-state"
-    key          = "terraform-aws-learning/terraform.tfstate"
+    bucket       = "terraform-aws-learning-state"
+    key          = "infrastructure/prod/terraform.tfstate"
     region       = "ap-northeast-1"
     encrypt      = true
     use_lockfile = true
